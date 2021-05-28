@@ -11,10 +11,7 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This thing is friendly");
                 break;
             case "Finish":
-                Debug.Log("Congrats! You finished the level");
-                break;
-            case "Fuel":
-                Debug.Log("You got fuel"); //right now we will just bump into it as you can't pick it we are just playing around with siwtchup
+                LoadNextLevel();
                 break;
             default:
                 ReloadLevel();
@@ -22,10 +19,22 @@ public class CollisionHandler : MonoBehaviour
 
         } 
     }
-
+    
+    void LoadNextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex ;
+        int nextSceneIndex = currentSceneIndex + 1 ;
+        if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+        SceneManager.LoadScene(nextSceneIndex);        
+    }
+    
     void ReloadLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex ;
         SceneManager.LoadScene(currentSceneIndex);
     }
+
 }
