@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
@@ -16,9 +17,15 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You got fuel"); //right now we will just bump into it as you can't pick it we are just playing around with siwtchup
                 break;
             default:
-                Debug.Log("You blew up");
+                ReloadLevel();
                 break;
 
-       } 
+        } 
+    }
+
+    void ReloadLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex ;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
