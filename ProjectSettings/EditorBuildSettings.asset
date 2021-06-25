@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Under.unity
     guid: adde7cb5096c04f47abdd2b63ccee70c
+  - enabled: 1
+    path: Assets/Scenes/Between.unity
+    guid: c172e4febcebc044e9dffe217f0bd720
+  - enabled: 1
+    path: Assets/Scenes/Between three.unity
+    guid: 4552178bd036d4b4f968ff4897b89353
+  - enabled: 1
+    path: Assets/Scenes/Triple Ocilation.unity
+    guid: c237ec9565a0ac14d9122bfddb7dcdec
+  - enabled: 1
+    path: Assets/Scenes/Around the World.unity
+    guid: db0291bb817e7c443a456fb1c5d8cd85
+  - enabled: 1
+    path: Assets/Scenes/Narrow.unity
+    guid: eea4ec74924ee204fa779085ff756fe0
   m_configObjects: {}
