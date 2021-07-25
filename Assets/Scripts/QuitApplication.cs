@@ -9,7 +9,7 @@ public class QuitApplication : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)) 
         {  
             Debug.Log("You quit the application");    
-            Application.Quit();
+            Application.Quit(); 
         }       
     }
 }
